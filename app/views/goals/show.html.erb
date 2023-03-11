@@ -1,0 +1,42 @@
+<main>
+    <section>
+        <h1><%=@goal.title%></h1>
+        <% if @goal.private %>
+            <p>This goal is private</p>
+        <% else %>
+            <p>This goal is public</p>
+        <% end %>
+        <% if @goal.completed %>
+            <p>This goal is completed</p>
+        <% else %>
+            <p>This goal is not completed</p>
+        <% end %>
+        
+        <% if @goal.user_id == @current_user.id %>
+            <a href="/goals/<%=@goal.id%>/edit" class="btton">Edit Goal</a>
+            <%= link_to "Delete Goal", goal_path(@goal.id), data: {"turbo-method": :delete} %>
+        <% end %>
+        
+        <br>
+        <br>
+        <h3>Comments</h3>
+        <%= form_with(model: [@goal, Comment.new], url: goal_comments_path(@goal)) do |form| %>
+            <%= form.text_area :body, placeholder: "Add a comment..." %>
+            <br>
+            <button type="submit" value="Comment" class="btton">Comment</button>
+        <% end %>
+
+        <% @goal.comments.each do |comment| %>
+            <hr>
+            <p><b><%= comment.user.username %></b></p>
+            <p><%= comment.body %></p>
+            <p><%= comment.created_at %></p>
+            
+            <%if comment.user_id == @current_user.id%>
+                <%= link_to 'Delete', comment_path(comment), data: {"turbo-method": :delete}%>
+            <%end%>
+            <br>
+            <br>
+        <% end %>
+    </section>
+</main>

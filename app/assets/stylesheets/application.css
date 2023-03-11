@@ -1,0 +1,214 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+    font-family: 'RampartOne-Regular';
+    src: url('assets/RampartOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Acme-Regular';
+    src: url('assets/Acme-Regular.ttf');
+}
+
+html, body, nav, h1, main, section {
+    font-family: 'RampartOne-Regular';
+    margin: 0%;
+}
+
+main {
+    padding: 8% 0 0;
+    margin: auto;
+  }
+
+nav {
+    background: #262626;
+    color: #fff;
+    height: 60px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+body {
+    background: #babcbd;
+}
+
+main form {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    background: #262626;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Acme-Regular';
+}
+
+label, p {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    
+}
+
+main form input {
+    font-family: "Acme-Regular";
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+main form button, .btton {
+    font-family: 'Acme-Regular';
+    text-transform: uppercase;
+    outline: 0;
+    background: #ea4c88;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+main form button:hover, main form button:active, main form button:focus, .btton:hover, .btton:active, .btton:focus {
+    background: #872b47;
+}
+
+main h1{
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+
+}
+
+section {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 800px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+}
+
+a {
+    color: #ea4c88;
+    text-decoration: none;
+}
+
+.login {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.goal-list {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.goal-item {
+    background-color: #dedede;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: -3px 4px 20px 0 rgb(0 0 0 / 20%), -2px 5px 5px 0 rgb(0 0 0 / 24%);
+    font-family: 'Acme-Regular';
+    width: 200px;
+    break-inside: avoid;
+}
+
+section h1 {
+   color: #262626;
+}
+
+.user-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-section div {
+    margin-right: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 65px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: "Acme-Regular";
+}
+
+a {
+    font-family: "Acme-Regular";
+}
+
+p {
+    font-family: "Acme-Regular";
+    color: #262626;
+}
+
+form p {
+    font-family: "Acme-Regular";
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    align-items: baseline;
+}

@@ -1,0 +1,19 @@
+<main>
+    <h1>Create a New User</h1>
+    <form action="<%=users_url%>" method="POST" class="login">
+        <div>
+            <label for="user_username">Username</label>
+            <input type="text" name="user[username]" id="user_username">
+        </div>
+        <div>
+            <label for="user_password">Password</label>
+            <input type="password" name="user[password]" id="user_password">
+        </div>
+        <div>
+            <button type="submit" value="Create User" class="btton">Create User</button>
+        </div>
+        <div>
+            <p>Already have an account? <%= link_to "Log In", new_session_url %> </p>
+        </div>
+    </form>
+</main>

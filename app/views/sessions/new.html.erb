@@ -1,0 +1,19 @@
+<main>
+    <h1>Log In</h1>
+    <form action="<%=sessions_url%>" method="POST" class="login">
+        <div>
+            <label for="user_username">Username</label>
+            <input type="text" name="user[username]" id="user_username">
+        </div>
+        <div>
+            <label for="user_password">Password</label>
+            <input type="password" name="user[password]" id="user_password">
+        </div>
+        <div>
+            <button type="submit" value="Log In" class="btton">Log In</button>
+        </div>
+        <div>
+            <p>Don't have an account? <%= link_to "Sign Up", new_user_url %> </p>
+        </div>
+    </form>
+<main>

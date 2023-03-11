@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyGoalApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <h1>
+        <%= link_to 'GoalsApp', href="/goals" %>
+      </h1>
+      <div> 
+        <% if @current_user.nil? %>
+          <a href="/users/new">Sign Up</a>
+          <a href="/sessions/new">Sign In</a>
+        <% else %>
+          <a href= "/users/show"><%= @current_user.username %></a>
+          <%= link_to 'Sign Out', href="/sessions/destroy", data: {"turbo-method": :delete} %>
+        <% end %>
+      </div>
+    </nav>
+    <% if flash[:errors] %>
+        <h2><%= flash[:errors] %></h2>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
