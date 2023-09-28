@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :comments, :polymorphic => true
   end
   resources :comments, only: [:destroy]
+  root "sessions#new"
 end
